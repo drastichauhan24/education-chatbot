@@ -6,6 +6,7 @@ import streamlit as st
 import numpy as np
 import random
 import nltk
+nltk.download('punkt_tab')
 
 @st.cache_resource
 def download_nltk_data():
@@ -184,4 +185,5 @@ st.markdown(
     "<div class='footer'>© 2025 Educational AI Chatbot | Deep Learning Powered</div>",
     unsafe_allow_html=True
 )
+
 
