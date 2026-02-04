@@ -6,6 +6,14 @@ import streamlit as st
 import numpy as np
 import random
 import nltk
+
+@st.cache_resource
+def download_nltk_data():
+    nltk.download('punkt')
+    nltk.download('wordnet')
+    nltk.download('omw-1.4')
+
+download_nltk_data()
 import joblib
 import pandas as pd
 from tensorflow.keras.models import load_model
@@ -176,3 +184,4 @@ st.markdown(
     "<div class='footer'>© 2025 Educational AI Chatbot | Deep Learning Powered</div>",
     unsafe_allow_html=True
 )
+
